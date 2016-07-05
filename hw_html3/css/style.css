@@ -3,6 +3,7 @@ html {
 }
 body {
     height: 100%;
+    overflow:hidden;
     background: #efefef;
     font-family: "Mariad Pro", Helvetica, sans-serif;
     font-size: 10px;
