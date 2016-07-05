@@ -36,7 +36,7 @@ a {
     border: 1px solid #c8c8c8;
 }
 section{
-    width: 480px;
+    width: 460px;
     float: right;
     margin: 30px;
 }
@@ -117,7 +117,7 @@ nav li{
     font-size: 10px;
     border: 1px solid #c8c8c8;
     padding: 5px 10px;
-    width: 130px;
+    width: 150px;
 }
 nav a{
     color: #656363;
@@ -128,7 +128,7 @@ nav a{
 nav li:hover{
     background: #f9f9f9;
     padding: 5px 25px;
-    max-width: 100px;
+    max-width: 120px;
 }
 nav a:hover{
     color: #2c2c2c;
