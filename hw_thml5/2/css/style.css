@@ -1,13 +1,13 @@
 
 table{
-    border: 0;
+    border: 1px solid #000;
     width: 500px;
     table-layout: fixed;
 }
 td{
     margin: 0;
     padding: 0;
-    border: 5px solid #000;
+    border: 4px solid #000;
 }
 tr{
     height: 60px;
