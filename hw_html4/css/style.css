@@ -18,19 +18,20 @@ body {
     width: 1000px;
     /*height: 1025px;*/
     border-bottom: solid 5px #000;
-    margin: 40px 150px 0px;
+    margin: 40px auto 0px;
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
     text-align: left;
 }
 header{
     color: #128aa7;
     background: #fff;
-    padding-top: 5px;
+    padding-top: 3px;
 }
 figure{
     clear: both;
 }
 nav {
+    
     width: 100%;
     height: 40px;
     background: #303030;
@@ -38,6 +39,7 @@ nav {
     box-shadow: 0 0 10px rgba(0,0,0,0.8);
     display: inline-block;
     line-height: 37px;
+    z-index: 2;
 }
 main{
     display: block;
@@ -47,6 +49,7 @@ main{
     overflow: hidden;
 }
 section{
+    display: block;
     font-size: 0;
     height: 100%;
 }
@@ -80,7 +83,9 @@ footer{
 
 li{
     float: left;
+    display: inline-block;
     padding: 0px;
+    vertical-align: middle;
     text-align: center;
 }
 .contries li {
@@ -88,14 +93,16 @@ li{
     color: #128aa7;
     font-size: 9pt; 
 }
-
+span{
+    display: block;
+}
 header a{
     color: #128aa7;
 }
 .drop_menu{
     display: block;
     position: relative;
-   
+    z-index: 2;
 }
 .drop_menu a, 
 .contacts a{
@@ -109,26 +116,25 @@ header a{
     display: inline-block;
     position: relative;
     width: 14%;
+    z-index: 2;
 }
+
 .submenu{
     display: none; 
-    top:41px;
     position: absolute;
-    
+    top: 100%;
+    left: 0;
     background: #303030;
     height: 150px;
     line-height: 30px;
     padding: 10px;
+    z-index: 1;
 }
 .drop_menu>li:hover>ul{
     display: block; 
-    position: absolute;
-    
 }
 .submenu>li:hover{
-    display: block; 
-    position: absolute;
-    
+    display: block;
 }
 ul:after{
     display: block;
@@ -140,7 +146,7 @@ b, h1 {
     font-weight: bold;
 }
 p{
-    padding: 2px;
+    line-height: 22px;
 }
 
 .left_block,
@@ -150,10 +156,11 @@ p{
     background-color: #edeef0;
 }
 .center_block{
-    width: 554px;
+    width: 553px;
 }
 .right_block{
     float: right;
+    top: 0;
 }
 .left_block,
 .center_block,
