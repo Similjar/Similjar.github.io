@@ -1,0 +1,539 @@
+html, body {
+    height: 100%;
+    width: 997px;
+}
+body {
+    background-color: white;
+    font-family: Arial, sans-serif;
+    color: #5e696d;
+    font-size: 0px;
+}
+.wrapper{
+    padding: 17px 45px;
+}
+/*------хидер с логином--------*/
+header{
+    height: 27px;
+    line-height: 27px;
+    vertical-align: middle;
+}
+.top_menu{
+    vertical-align:top;
+    background-color: yellow;
+}
+.top_menu .tel{
+    display: inline-flex;
+    vertical-align: top;
+}
+.top_menu .tel li{
+    display: inline-block;
+    font-size: 18px;
+    padding: 3px 6px;
+    line-height: 25px;
+    
+}
+.tel li:first-child{
+    background: linear-gradient(to top, #0D3458, #1f6685);
+    border-radius: 15px;
+    color: #fff;
+    height: 20px;
+    font-size: 18px;
+    vertical-align: middle;
+    padding-top: 2px;
+    line-height: 24px;
+}
+
+.top_menu form {
+    display: inline-flex;
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+    background: linear-gradient(to top, #0D3458, #1f6685);
+    font-size: 11px;
+    color: #fff;
+    padding: 4px 4px;
+    text-align: left;
+    vertical-align: top;
+    line-height: 20px;
+    margin-left: 16px;
+    width: 488px;
+    box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+}
+.top_menu form a{
+    padding: 0 4px;
+    vertical-align: middle;
+}
+.top_menu form a:last-child{
+    padding-left: 20px;
+}
+.top_menu form a:hover{
+    font-size: 12px;
+    color: #bfbfbf;
+    text-decoration: underline;
+}
+.top_menu form input{
+    font-size: 11px;
+    color: #97a2a6;
+    padding: 0px 4px;
+    margin: 0px 3px;
+    width: 104px;
+}
+.top_menu .contact{
+    display: inline-flex;
+    border-radius: 15px;
+    font-size: 11px;
+    padding: 0 6px;
+    border: 1px solid #bdc4b7;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    line-height: 18px;
+    margin-top: 3px;
+    margin-left: 18px;
+}
+.top_menu .contact li{
+    padding: 0 5px;
+}
+/*------картинка--------*/
+.logo_img{
+    position: relative;
+    background: url(../img/logo_img.png) right no-repeat;
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+    height: 237px;
+    margin-top: 10px;
+    font-size: 25px;
+    color: #8f1507;
+    vertical-align: bottom;
+}
+.logo_img span{
+    font-size: 31px;
+    color: #cdcdcd;
+    vertical-align: bottom;
+}
+.logo_img a{
+    font-size: 54px;
+    color: #cdcdcd;
+    text-align:right;
+}
+.logo_img .logo{
+    display: block;
+    position: absolute;
+    left:0;
+    top:50px;
+    width: 265px;
+    height: 119px;
+    background: #031d35;
+}
+.logo_img .a_logo{
+    display: block;
+    position: absolute;
+    bottom:0px;
+    line-height: 25px;
+    text-align: right;
+}
+/*------навигационное меню о компании--------*/
+nav{
+    display: block;
+    position: relative;
+    background: linear-gradient(to top, #000, #576068);
+    color: #b1bcc0;
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+    margin: 7px 0 10px 0;
+    border-top: 4px outset #576068;
+    border-bottom: 4px solid #000;
+    border-radius: 5px;
+    height: 27px;
+    line-height: 27px;
+    box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
+}
+nav ul{
+    padding: 2px 30px 0 131px;
+    text-transform: uppercase;
+}
+nav li{
+    display: inline-block;
+    font-size: 14px;
+    padding: 0 17px;
+    
+}
+nav li:hover{
+    background: linear-gradient(to top,  #0C3256 50%, #206988);
+    border-radius: 26px;
+}
+nav form{
+    display: inline-block;
+    position: absolute;
+    vertical-align: middle;
+    line-height: 24px;
+    top: 0;
+    right: 7px;
+    width: 219px;
+    font-size: 11px;
+}
+.cart span {
+    padding: 1px;
+}
+nav output {
+    color: #0D5A8F;
+    font-size: 12px;
+    text-align: left;
+    width: 35px;
+    padding: 5px;
+}
+
+nav img{
+    display: inline-block;
+    line-height: 26px;
+    vertical-align: middle;
+}
+/*------поиск--------*/
+/*------поиск, общие эл-ты--------*/
+.search {
+    position: relative;
+    display: inline-flex;
+    height: 135px;
+    width: 100%;
+    flex-flow: row wrap; /*многострочный, слева-направо*/
+    justify-content: space-between; /*растягивает по всей ширине*/
+    align-items:stretch; /*растягивает по длине*/
+    align-content: stretch;
+    margin-left: 5px;
+    font-size: 9px;
+    color: #77858B;
+}
+.search h1{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0%;
+    margin: 0 auto;
+    font-size: 12px;
+    font-weight: 700;
+    width: inherit;
+    color: #154467;
+    text-align: center;
+}
+.search h3{
+    color: #154468;
+    font-weight: 800;
+    margin-top: 5px;
+}
+.search b{
+    font-size: 10px;
+    color: #000;
+    font-weight: 600;
+}
+.search p{
+    margin: 3px 10px 0 0;
+}
+.search span{
+    display: inline-block;
+    padding-right: 2px;
+    vertical-align: middle
+}
+.search select{
+    display: inline-block;
+    vertical-align: middle;
+    border-bottom: hidden;
+    
+}
+.search form input[type=submit]{
+    position: absolute;
+    background: none;
+    border: none;
+    bottom: 9px;
+    right: 12px;
+    font-size: 14px;
+    line-height: 15px;
+    text-decoration: underline;
+    font-style: italic;
+    color: #154467;
+    font-weight: 600;
+}
+
+/*------поиск, элементы по формам--------*/
+.search_car, .search_tir, .search_disc{
+    position: relative;
+    display: inline-flex;
+    flex-flow: row wrap; /*многострочный, слева-направо*/
+    justify-content: space-between; /*растягивает по всей ширине*/
+    align-items:stretch; /*растягивает по длине*/
+    align-content: stretch;
+    border: 1px solid #686868;
+    box-shadow:5px 6px 8px rgba(0,0,0,0.3);
+    border-radius: 18px;
+    padding-left: 16px;
+    height: 134px;
+}
+.search .search_car h3{
+    font-size: 11px;
+}
+.search .search_tir h3,
+.search .search_disc h3{
+    font-size: 13px;
+    font-weight: 700;
+    margin-top: 3px;
+}
+.search_car{
+    width: 396px; 
+}
+.search_tir{
+    width: 175px;
+}
+.search_disc{
+    width: 258px;
+}
+.search .car{
+    width: 50%;
+}
+.search .disc1{
+    width: 62%;
+}
+.search .disc2{
+    width: 33%;
+    padding-left: 10px;
+    border-left: 1px solid;
+}
+.search_car .car_tir_h3{
+    text-align: right;
+    padding-right: 20px;
+}
+.search_car span,
+.search_disc span{
+    width: 77px;
+}
+.search_tir span{
+    width: 43px;
+}
+.search_tir .R{
+    width: 36px;
+    padding-right: 9px;
+    text-align: right;
+}
+.search_car select{
+    width: 100px;
+}
+.search_disc select{
+    width: 56px;
+}
+.search_tir label{
+    font-size: 12px;
+    color: #000;
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+}
+
+.search_tir .seazon{
+    margin-top: 2px;
+    display: inline-block;
+    position: relative;
+}
+.search_tir ul{
+    width: 100px;
+    position: absolute;
+    top: 0px;
+    left: 44px;
+}
+
+/*------MAIN aside--------*/
+.main{
+    display: inline-flex;
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+    color: #465961;
+    width: 100%;
+    margin-top: 16px;
+}
+.main aside{
+    font-size: 13px;
+    line-height: 25px;
+    margin-top: 3px;
+}
+
+.main aside .name_menu{
+    border: 1px solid #bdc4b7;
+    border-radius: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    line-height: 24px;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #114165;
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+.main aside .name_submenu{
+    border: 1px solid #bdc4b7;
+    border-radius: 15px;
+    font-size: 13px;
+    text-transform: uppercase;
+    color: #114165;
+    font-weight: 600;
+}
+.main .katalog{
+    width: 206px;
+}
+.main .brands{
+    width: 206px;
+}
+.main .katalog .name_menu{
+    line-height: 26px;
+    width: 181px;
+}
+.main .brands .name_menu{
+    margin-left: 2px;
+    width: 179px;
+    line-height: 23px;
+}
+.main .katalog .name_submenu{
+    line-height: 24px;
+    width: 151px;
+}
+.main .brands .name_submenu{
+    margin-left: 15px;
+    margin-top: 9px;
+    width: 137px;
+}
+
+.name_menu i,
+.name_submenu i{
+    margin: auto 5px;
+    border-radius: 10px;
+    vertical-align: middle;
+}
+.main i{
+    font-weight: 600;
+    font-size: 8px;
+}
+.name_menu i{
+    background: #114165;
+    color: white;
+    border-radius: 10px;
+    font-size: 14px;
+    padding: 3px;
+}
+.name_submenu i{
+    background: white;
+    color: #114165;
+    font-size: 25px;
+}
+.main .katalog label{
+    padding-left: 15px;
+    background: url(../img/radio.png) left no-repeat;
+}
+.main input[type="radio"]{
+    display: none;
+}
+
+.main input[type=radio]:checked+label,
+.main input[type=checkbox]:checked+label{
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #0C3256;
+    font-style: italic;
+    font-weight: 600;
+}
+.main input[type=radio]:checked+label{
+    background: url(../img/radio_check.png) left no-repeat;
+}
+.main .katalog ul{
+    padding-left: 32px;
+}
+.main .brands ul{
+    padding-left: 32px;
+    padding-top: 4px;
+}
+.main .brands input[type=submit]{
+    background: linear-gradient(to top,  #0C3256 50%, #206988);
+    border-radius: 26px;
+    font-family: Arial, sans-serif;
+    border-bottom: 1px solid #0C3256;
+    font-size: 11px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 23px;
+    width: 82px;
+    margin-left: 25px;
+    margin-top: 12px;
+}
+/*------MAIN --------*/
+.main main{
+    display: inline-flex;
+    
+    flex-flow: row wrap; /*многострочный, слева-направо*/
+    justify-content: space-between; /*растягивает по всей ширине*/
+    align-items:stretch; /*растягивает по длине*/
+    align-content: stretch;
+    background: linear-gradient(to top, #234B5D, #C9CFD1);
+    color: #1F2528;
+    margin: 0 5px 0 9px;
+    padding: 0 23px 20px;
+    border-radius: 5px;
+    width: 556px;
+}
+.main figure{
+    width: 147px;
+    text-align: center;
+    padding: 13px 0;
+    font-size: 13px;
+}
+.main figure b{
+    color: #206988;
+    font-size: 15px;
+    font-weight: 600;
+}
+.main figure figcaption{
+    color: #114165;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    padding-top: 1px;
+    font-weight: 800;
+    font-style: italic;
+}
+.main .image{
+    background: #fff;
+    border-radius: 16px;
+    border: 1px solid;
+    width: 137px;
+    height: 129px;
+}
+
+/*------нижнее меню брендов--------*/
+.nav_brends {
+    margin: 27px auto 16px;
+}
+.nav_brends li{
+    display: inline-block;
+}
+.nav_brends ul{
+    vertical-align: middle;
+    text-align: center;
+    margin: 0 auto;
+}
+
+/*------нижнее меню брендов--------*/
+
+footer{
+    background: #213A4D;
+    height: 100px;
+    text-align: center;
+    text-indent: 10px;
+}
+footer ul {
+    padding-top: 11px;
+    margin-right: 9px;
+}
+footer li{
+    display: inline-block;
+    font-size: 12px;
+    color: #BEC6C9;
+    line-height: 12px;
+    padding: 0 11px 0 5px;
+    border-left: 1px solid;
+}
+footer li:first-child{
+    border-left: hidden;
+}
+footer li:hover{
+    color: #52ABCB;
+}
+footer p{
+    font-size: 10px;
+    color: #7F4740;
+    margin-top: 16px;
+    margin-right: 10px;
+}
+
