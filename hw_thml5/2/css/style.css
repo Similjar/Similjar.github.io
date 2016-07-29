@@ -1,0 +1,56 @@
+
+table{
+    border: 1px solid #000;
+    width: 500px;
+    table-layout: fixed;
+}
+td{
+    margin: 0;
+    padding: 0;
+    border: 4px solid #000;
+}
+tr{
+    height: 60px;
+}
+tr.row1{
+    height: 140px;
+}
+tr.row2{
+    height: 60px;
+}
+tr.row3{
+    height: 40px;
+}
+.col_top{
+    border-top: 0px;
+}
+.col_l{
+    border-left: 0;
+}
+.col_r{
+    border-right: 0;
+}
+.col_bot{
+    border-bottom: 0;
+}
+.col_add1{
+    border-right-color: white;
+}
+.col_add2{
+    border-left-color: white;
+}
+.wht{
+    background-color: white;
+}
+.yell{
+    background-color: yellow;
+}
+.red{
+    background-color: red;
+}
+.bl{
+    background-color: blue;
+}
+.blk{
+    background-color: black
+}
