@@ -136,7 +136,7 @@ form{
     line-height: 33px;
     text-align: center;
     padding-left: 30px;
-    border-left: 1px outset #758AB9;
+    border-left: 2px ridge #758AB9;
     font-size: 14px;
     font-weight: bold;
 }
@@ -146,7 +146,7 @@ form{
 i{
   font-size: 14px;
   padding: 0 10px;
-  border-right: 1px outset #758AB9;
+
 }
 .ou{
     position: relative;
