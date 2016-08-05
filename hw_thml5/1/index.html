@@ -13,6 +13,14 @@
             font-weight: normal;
             font-style: normal;
         }
+        @font-face {
+            font-family: "Lucida";
+            src: url('fonts/lucida_sans_400norm_bas-webfont.woff2') format('woff2'),
+                 url('fonts/lucida_sans_400norm_bas-webfont.woff') format('woff');
+            font-weight: normal;
+            font-style: normal;
+
+        }
     </style>
 </head>
 
@@ -25,47 +33,51 @@
         <li><a class="img_menu" href="">Forum</a></li>
         <li><a class="img_menu" href="">Contato</a></li>
         <li><a class="img_menu" href="">Ajuda</a></li>
-        <li class="flag end_child"><a class="img_menu" href=""><img class="flag_img" alt="Flag" src="img/flag.png"></a> </li> 
-        <li class="end_child"><a class="img_menu" href="">Minhas Ofertas</a></li>
-        <li class="end_child"><a class="h_menu" href="">Ola! <em>Entrar</em> ou <em>Cadastre-se</em></a></li>
+        <li><a class="img_menu" href="">Minhas Ofertas</a></li>
     </ul>
+
+    <button class="ola" name="name" value="Ola! Entrar ou Cadastre-se">Ola! <a class="ola_a" href="">Entrar</a> ou <a class="ola_a" href="">Cadastre-se</a></button>
+
 </header>
 
-    <div class="form">
-        <form method="get" class="body_fotm" action="">
-            <div class="name_form">
-                <h1>Cadastre-se</h1>
-            </div>
-            
-            <button class="fb_button" name="in_form[]" value="Log In with Facebook"> <img class="fb_img" src="img/fb_logo.png"> <span class="fb_span">Log In with Facebook   ></span></button>
-            
-            <div class="ou">
+<div class="conteiner">
+<main>
+    <div class="name_form">
+          <h1>Cadastre-se</h1>
+    </div>
+    <div class="fb">
+            <button class="fb_button" name="in_form[]" value="Log In with Facebook"><i class="fa fa-facebook" aria-hidden="true">F</i><span class="fb_span">Log In <span class="fb_norm">with</span> Facebook &#8195; &#62;</span></button>
+    </div>
+
+    <div class="ou">
                 <div class="ou1"></div>
                 <div class="ou2"></div>
                 <div class="ou3"></div>
                 <div class="ou4"></div>
                 <h2>OU</h2>
-            </div>
-            
+    </div>
+
+    <form method="get" class="body_fotm" action="">
             <input  class="odject_form" type="text" name="in_form[]" placeholder="First Name" required>
             <input class="odject_form" type="text" name="in_form[]" placeholder="Last Name" required>
             <input class="odject_form" type="text" name="in_form[]" placeholder="Email Address" required>
             <input class="odject_form" type="password" name="in_form[]" placeholder="Choose Password" required>
             <input class="odject_form" type="password" name="in_form[]" placeholder="Password Confirm" required>
-             
+
             <label for="send_apdates" class="ch_box">
                 <input type="checkbox" name="in_form[]" id="send_apdates">
                 Send me Youbike updates and tips
             </label>
-            
+
             <div>
                 <input class="cr_account" type="submit"  name="in_form[]" value="Create my Account">
 
                 <p class="footer_form">By clicking the button above, you agree to the Terms of Service</p>
                 <p class="footer_form">Xiew our Privacy Policy.</p>
             </div>
-        </form>
-    </div>
+      </form>
+</main>
+</div>
 </div>
 </body>
-    
+</html>
