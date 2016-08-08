@@ -21,7 +21,6 @@ header{
 }
 .top_menu{
     vertical-align:top;
-    background-color: yellow;
 }
 .top_menu .tel{
     display: inline-flex;
@@ -45,8 +44,9 @@ header{
     line-height: 24px;
 }
 
-.top_menu form {
+.top_menu .login_form {
     display: inline-flex;
+    min-width: 488px;
     font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
     background: linear-gradient(to top, #0D3458, #1f6685);
     font-size: 11px;
@@ -58,26 +58,42 @@ header{
     margin-left: 16px;
     width: 488px;
     box-shadow: 2px 4px 4px rgba(0,0,0,0.3);
+    border-radius: 5px;
 }
-.top_menu form a{
+.top_menu .login_form input[type=submit],
+.top_menu .login_form a{
     padding: 0 4px;
     vertical-align: middle;
+    background: none;
+    border: none;
+    color: inherit;
+    text-shadow: rgba(0,0,0,.6);
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
 }
-.top_menu form a:last-child{
-    padding-left: 20px;
+.top_menu .login_form input[type=submit]:last-child{
+    padding-left: 10px;
 }
-.top_menu form a:hover{
+.top_menu input[type=submit]:hover,
+.top_menu a:hover{
     font-size: 12px;
     color: #bfbfbf;
     text-decoration: underline;
+    font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
+    font-size: 11px;
 }
-.top_menu form input{
+.top_menu .login_form input.sub_border {
+    border-right: 1px solid #97a2a6;
+}
+.top_menu .login_form input[type=text],
+.top_menu .login_form input[type=password]{
     font-size: 11px;
     color: #97a2a6;
     padding: 0 4px;
     margin: 0 3px;
-    width: 104px;
+    width: 100px;
 }
+
 .top_menu .contact{
     display: inline-flex;
     border-radius: 15px;
@@ -196,31 +212,32 @@ nav img{
 /*------поиск--------*/
 /*------поиск, общие эл-ты--------*/
 .search {
-    position: relative;
     display: inline-flex;
     height: 135px;
     width: 100%;
     flex-flow: row wrap; /*многострочный, слева-направо*/
     justify-content: space-between; /*растягивает по всей ширине*/
-    align-items:stretch; /*растягивает по длине*/
+  /*  position: relative;
     align-content: stretch;
+    align-items:stretch; /*растягивает по длине*/
     margin-left: 5px;
     font-size: 9px;
     color: #77858B;
 }
 .search h1{
     display: block;
-    position: absolute;
+/*    position: absolute;
     top: 0;
     left: 0;
-    margin: 0 auto;
+    width: inherit;
+    text-shadow: rgba(0,0,0,.5);
+    margin: 0 auto;  */
     font-size: 12px;
     font-weight: 700;
-    width: inherit;
     color: #154467;
     text-align: center;
 }
-.search h3{
+.search .h3{
     color: #154468;
     font-weight: 800;
     margin-top: 5px;
@@ -233,7 +250,12 @@ nav img{
 .search p{
     margin: 3px 10px 0 0;
 }
-.search span{
+.search .to_h3{
+    display: table-cell;
+    width: 100%;
+    top: 7px;
+}
+.search .form_span{
     display: inline-block;
     padding-right: 2px;
     vertical-align: middle
@@ -242,9 +264,10 @@ nav img{
     display: inline-block;
     vertical-align: middle;
     border-bottom: hidden;
-
+    height: 16px;
+    font-size: 11px;
 }
-.search form input[type=submit]{
+.search input[type=submit]{
     position: absolute;
     background: none;
     border: none;
@@ -260,23 +283,31 @@ nav img{
 
 /*------поиск, элементы по формам--------*/
 .search_car, .search_tir, .search_disc{
-    position: relative;
-    display: inline-flex;
+   position: relative;
+/*    display: inline-flex;
     flex-flow: row wrap; /*многострочный, слева-направо*/
-    justify-content: space-between; /*растягивает по всей ширине*/
-    align-items:stretch; /*растягивает по длине*/
-    align-content: stretch;
+/*    justify-content: space-between; /*растягивает по всей ширине*/
+/*    align-items:stretch; /*растягивает по длине*/
+/*    align-content: stretch;*/
     border: 1px solid #686868;
     box-shadow:5px 6px 8px rgba(0,0,0,0.3);
     border-radius: 18px;
     padding-left: 16px;
     height: 134px;
 }
-.search .search_car h3{
-    font-size: 11px;
+.form_car, .form_disc{
+    display: inline-flex;
+    flex-flow: row wrap; /*многострочный, слева-направо*/
+    justify-content: space-between; /*растягивает по всей ширине*/
+    align-items:stretch; /*растягивает по длине*/
+    align-content: stretch;
 }
-.search .search_tir h3,
-.search .search_disc h3{
+.search .search_car .h3{
+    font-size: 11px;
+
+}
+.search .search_tir .h3,
+.search .search_disc .h3{
     font-size: 13px;
     font-weight: 700;
     margin-top: 3px;
@@ -301,20 +332,23 @@ nav img{
     padding-left: 10px;
     border-left: 1px solid;
 }
-.search_car .car_tir_h3{
+.search_car span.h3.car_tir_h3{
     text-align: right;
     padding-right: 20px;
 }
-.search_car span,
-.search_disc span{
+.search_car  .span_form,
+.search_disc .span_form{
+    display: inline-block;
     width: 77px;
 }
-.search_tir span{
+.search_tir .span_form{
     width: 43px;
+    margin-top: 4px;
 }
 .search_tir .R{
+  display: inline-block;
     width: 36px;
-    padding-right: 9px;
+    padding-right: 4px;
     text-align: right;
 }
 .search_car select{
@@ -337,8 +371,8 @@ nav img{
 .search_tir ul{
     width: 100px;
     position: absolute;
-    top: 0;
-    left: 44px;
+    top: 1px;
+    left: 39px;
 }
 
 /*------MAIN aside--------*/
@@ -500,11 +534,14 @@ nav img{
     width: 137px;
     height: 129px;
   }
-.main .image span{
+.main .image a{
     display: block;
     background: url(../img/koleso.png) center no-repeat;
     height: 119px;
     padding-top: 6px;
+}
+.main a{
+  display: block;
 }
 /*------нижнее меню брендов--------*/
 .nav_brends {

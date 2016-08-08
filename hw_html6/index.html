@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         @font-face {
-            font-family: "Lucida";
+            font-family: "lucida";
             src: url('fonts/lucida_sans_400norm_bas-webfont.woff2') format('woff2'),
                  url('fonts/lucida_sans_400norm_bas-webfont.woff') format('woff');
             font-weight: normal;
@@ -30,16 +30,17 @@
 
     <form class="login_form" method="get" action="#">
         <a class="login" href=""> <i class="fa fa-user-secret" aria-hidden="true"></i></a>
-        <input type="text" name="login[]" placeholder="Login" required>
-        <input type="password" name="login[]" placeholder="Password" required>
-        <a class="login" href="">вход</a>|
-        <a class="login" href="">регистрация</a>
-        <a class="login" href="">забыли пароль?</a>
+        <input type="text" name="login[]" placeholder="логин" required>
+        <input type="password" name="login[]" placeholder="пароль" required>
+        <input type="submit" name="log" value="вход" class="sub_border">
+        <input type="submit" name="reg" value="регистрация">
+        <input type="submit" name="remember" value="забыли пароль?">
+
     </form>
 
     <ul class="contact">
-        <li><a class="cont_home" href="zazor.com.ua"><i class="fa fa-home" aria-hidden="true"></i></a></li>
-        <li><a class="cont_map" href="zazor.com.ua/map"><i class="fa fa-sitemap" aria-hidden="true"></i></a></li>
+        <li><a class="cont_home" href="#"><i class="fa fa-home" aria-hidden="true"></i></a></li>
+        <li><a class="cont_map" href="#"><i class="fa fa-sitemap" aria-hidden="true"></i></a></li>
         <li><a class="cont_mail" href="mailto:mail@zazor.com.ua"><i class="fa fa-envelope-o" aria-hidden="true"></i></a></li>
     </ul>
 
@@ -49,8 +50,7 @@
 <div class="logo_img">
     <div class="logo">
         <div class="a_logo">
-            <a href="zazor.com.ua">zazor<span>.com.ua</span>
-            </a>
+            <a href="#">zazor<span>.com.ua</span></a>
             <p>drives you away</p>
         </div>
     </div>
@@ -67,20 +67,29 @@
     </ul>
 
     <form class="cart">
-        <span><a href="#" alt="Карзина"></a></span>
+        <span><img src="img/kash.png"></span>
         <span>товаров: <output name="goods_nom">0</output></span>
         <span>на сумму: <output name="goods_nom">0,00 грн.</output></span>
     </form>
 </nav>
 
+<!-- Меню поиска  -->
 <aside class="search">
-    <form class="search_car">
+
+  <!-- поиск по авто -->
+  <div class="search_car">
         <h1>Поиск по автомобилю</h1>
-        <div class="car">
-            <h3>Диски:</h3>
-            <p><span>
+        <p class="to_h3">
+          <span class="h3">Диски:</span>
+          <span class="h3 car_tir_h3">Шины:</span>
+        </p>
+    <form class="form_car"  action="index.html" method="get">
+          <div class="car">
+            <p><span class="span_form">
                 <b>Марка</b> авто:</span>
             <select name="marka_car">
+
+              <!-- странный i  ???????? -->
                 <i class="fa fa-caret-square-o-down" aria-hidden="true"></i>
                 <optgroup label="marka_car">
                     <option value="1">1</option>
@@ -90,7 +99,7 @@
                 </select>
             </p>
             <p>
-                <span><b>Модель</b> автомобиля:</span>
+                <span class="span_form"><b>Модель</b> автомобиля:</span>
                 <select name="model_car">
                 <optgroup label="model_car">
                     <option value="1">1</option>
@@ -100,7 +109,7 @@
                 </select>
             </p>
             <p>
-                <span><b>Год</b> выпуска:</span>
+                <span class="span_form"><b>Год</b> выпуска:</span>
                 <select name="god_car">
                     <optgroup label="god_car">
                         <option value="1">1</option>
@@ -110,7 +119,7 @@
                 </select>
             </p>
             <p>
-                <span><b>Комплектация:</b></span>
+                <span class="span_form"><b>Комплектация:</b></span>
                 <select name="kompl_car">
                     <optgroup label="kompl_car">
                         <option value="1">1</option>
@@ -122,9 +131,8 @@
         </div>
 
         <div class="car">
-            <h3 class="car_tir_h3">Шины:</h3>
             <p>
-                <span><b>Марка</b> авто:</span>
+                <span class="span_form"><b>Марка</b> авто:</span>
                 <select name="marka_car">
                     <optgroup label="marka_car">
                         <option value="1">1</option>
@@ -134,7 +142,7 @@
                 </select>
             </p>
             <p>
-                <span><b>Модель</b> автомобиля:</span>
+                <span class="span_form"><b>Модель</b> автомобиля:</span>
                 <select name="model_car">
                     <optgroup label="model_car">
                         <option value="1">1</option>
@@ -144,7 +152,7 @@
                 </select>
             </p>
             <p>
-                <span><b>Год</b> выпуска:</span>
+                <span class="span_form"><b>Год</b> выпуска:</span>
                 <select name="god_car">
                     <optgroup label="god_car">
                         <option value="1">1</option>
@@ -154,7 +162,7 @@
                 </select>
             </p>
             <p>
-                <span><b>Комплектация:</b></span>
+                <span class="span_form"><b>Комплектация:</b></span>
                 <select name="kompl_car">
                     <optgroup label="kompl_car">
                         <option value="1">1</option>
@@ -166,12 +174,16 @@
         </div>
         <input type="submit" value="поиск...">
     </form>
+  </div>
 
-    <form class="search_tir">
-        <div class="tir1">
-            <h3>Поиск шин:</h3>
+    <!-- поиск по шинам -->
+    <div class="search_tir">
+          <span class="h3">поиск шин:</span>
+
+    <form class="form_tir" action="index.html" method="get">
+      <div class="tir1">
             <p>
-            <span><b>Размер:</b></span>
+            <span class="span_form"><b>Размер:</b></span>
             <select name="size_tir1">
                 <optgroup label="size_tir1">
                     <option value="1">1</option>
@@ -190,7 +202,7 @@
             </p>
 
             <p>
-                <span class="R"><b> R</b> </span>
+                <span class="R span_form"><b> R</b> </span>
             <select name="size_tir3">
                 <optgroup label="size_tir3">
                     <option value="1">1</option>
@@ -200,7 +212,7 @@
             </select>
         </p>
         <span class="seazon">
-            <span><b>Сезон:</b></span>
+            <span class="span_form"><b>Сезон:</b></span>
             <ul>
                 <li><input type="checkbox" name="sizon_s" id="sizon_s">
                     <label for="sizon_s">лето</label></li>
@@ -214,12 +226,16 @@
         </div>
         <input type="submit" value="поиск...">
     </form>
+  </div>
 
-    <form class="search_disc">
-        <div class="disc1">
-            <h3>Поиск дисков:</h3>
+    <!-- поиск по дискам -->
+    <div class="search_disc">
+        <span class="h3">поиск дисков:</span>
+
+      <form class="form_disc" action="index.html" method="get">
+          <div class="disc1">
             <p>
-            <span><b>Диаметр</b> диска:</span>
+            <span class="span_form"><b>Диаметр</b> диска:</span>
             <select name="D_disc">
                 <optgroup label="D_disc">
                     <option value="1">1</option>
@@ -229,7 +245,7 @@
             </select>
         </p>
         <p>
-            <span><b>Количество</b> крепёжных отверстий:</span>
+            <span class="span_form"><b>Количество</b> крепёжных отверстий:</span>
             <select name="Q_otv_disc">
                 <optgroup label="Q_otv_disc">
                     <option value="1">1</option>
@@ -239,7 +255,7 @@
             </select>
         </p>
         <p>
-            <span><b>Диаметр</b> расположения крепёжных отверстий:</span>
+            <span class="span_form"><b>Диаметр</b> расположения крепёжных отверстий:</span>
             <select name="D_otv_disc">
                 <optgroup label="D_otv_disc">
                     <option value="1">1</option>
@@ -251,7 +267,7 @@
         </div>
         <div class="disc2">
         <p>
-            <span><b>ДЦО</b>(диаметр центрального отверстия):</span>
+            <span class="span_form"><b>ДЦО</b>(диаметр центрального отверстия):</span>
             <select name="D_1otv_disc">
                 <optgroup label="D_1otv_disc">
                     <option value="1">1</option>
@@ -261,7 +277,7 @@
             </select>
         </p>
         <p>
-            <span><b>ЕТ</b>(вылет диска):</span>
+            <span class="span_form"><b>ЕТ</b>(вылет диска):</span>
             <select name="et_disc">
                 <optgroup label="et_disc">
                     <option value="1">1</option>
@@ -273,8 +289,11 @@
         </div>
         <input type="submit" value="поиск...">
     </form>
+  </div>
 </aside>
 
+
+<!-- главный блок с товаром -->
 <div class="main">
     <aside class="katalog">
         <p class="name_menu"> <i class="fa fa-file-text-o" aria-hidden="true"></i>  Каталог продукции:</p>
@@ -317,63 +336,63 @@
     <figure>
         <p><b>Goodyear</b></p>
         <p>Ultra Grip Extreme</p>
-      <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>90.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Nokian</b></p>
         <p>Hakkapeliitta R</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>115.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Hankook</b></p>
         <p>K 708 155/65 R14</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>393.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Goodyear</b></p>
         <p>Ultra Grip Extreme</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>90.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Nokian</b></p>
         <p>Hakkapeliitta R</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>115.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Hankook</b></p>
         <p>K 708 155/65 R14</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>393.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Goodyear</b></p>
         <p>Ultra Grip Extreme</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>90.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Nokian</b></p>
         <p>Hakkapeliitta R</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>115.00 грн.</figcaption>
     </figure>
 
     <figure>
         <p><b>Hankook</b></p>
         <p>K 708 155/65 R14</p>
-        <p class="image"><span></span></p>
+        <p class="image"><img src="img/koleso.png" alt="Goodyear Ultra Grip Extreme"></p>
         <figcaption>393.00 грн.</figcaption>
     </figure>
     </main>
@@ -381,23 +400,23 @@
     <aside class="brands">
         <p class="name_menu"> <i class="fa fa-file-text-o fa-x" aria-hidden="true"></i>Бренды:</p>
         <form>
-          <p class="name_submenu"> <i class="fa fa-circle-o fa-2x" aria-hidden="true"></i>Шины:</p>
-          <ul>
-              <li><label for="brand_tir1"><input type="checkbox" name="brand_tir[]" id="brand_tir1">Бренд 1</label></li>
-              <li><label for="brand_tir2"><input type="checkbox" name="brand_tir[]" id="brand_tir2">Бренд 2</label></li>
-              <li><label for="brand_tir3"><input type="checkbox" name="brand_tir[]" id="brand_tir3">Бренд 3</label></li>
-          </ul>
+        <p class="name_submenu"> <i class="fa fa-circle-o fa-2x" aria-hidden="true"></i>Шины:</p>
+        <ul>
+            <li><label for="brand_tir1"><input type="checkbox" name="brand_tir[]" id="brand_tir1">Бренд 1</label></li>
+            <li><label for="brand_tir2"><input type="checkbox" name="brand_tir[]" id="brand_tir2">Бренд 2</label></li>
+            <li><label for="brand_tir3"><input type="checkbox" name="brand_tir[]" id="brand_tir3">Бренд 3</label></li>
+        </ul>
 
-          <p class="name_submenu"> <i class="fa fa-circle-o fa-x" aria-hidden="true"></i>Диски:</p>
-          <ul>
-              <li><input type="checkbox" name="brand_disc[]" id="brand_disc1">
-              <label for="brand_disc1">Бренд 1</label></li>
-              <li><input type="checkbox" name="brand_disc[]" id="brand_disc2">
-              <label for="brand_disc2">Бренд 2</label></li>
-              <li><input type="checkbox" name="brand_disc[]" id="brand_disc3">
-              <label for="brand_disc3">Бренд 3</label></li>
-          </ul>
-          <input type="submit" value="Выбрать">
+        <p class="name_submenu"> <i class="fa fa-circle-o fa-x" aria-hidden="true"></i>Диски:</p>
+        <ul>
+            <li><input type="checkbox" name="brand_disc[]" id="brand_disc1">
+            <label for="brand_disc1">Бренд 1</label></li>
+            <li><input type="checkbox" name="brand_disc[]" id="brand_disc2">
+            <label for="brand_disc2">Бренд 2</label></li>
+            <li><input type="checkbox" name="brand_disc[]" id="brand_disc3">
+            <label for="brand_disc3">Бренд 3</label></li>
+        </ul>
+        <input type="submit" value="Выбрать">
 
         </form>
     </aside>
@@ -426,3 +445,4 @@
     </footer>
 </div>
 </body>
+</html>
