@@ -69,10 +69,10 @@ header{
     color: inherit;
     text-shadow: rgba(0,0,0,.6);
     font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
-    font-size: 11px;
+    font-size: 12px;
 }
 .top_menu .login_form input[type=submit]:last-child{
-    padding-left: 10px;
+    padding-left: 15px;
 }
 .top_menu input[type=submit]:hover,
 .top_menu a:hover{
@@ -90,8 +90,8 @@ header{
     font-size: 11px;
     color: #97a2a6;
     padding: 0 4px;
-    margin: 0 3px;
-    width: 100px;
+    margin: 0 4px;
+    width: 101px;
 }
 
 .top_menu .contact{
@@ -161,7 +161,7 @@ nav{
     box-shadow: 3px 3px 5px rgba(0,0,0,0.3);
 }
 nav ul{
-    padding: 0 30px 0 131px;
+    padding: 0 30px 0 125px;
     text-transform: uppercase;
 }
 nav li{
@@ -193,7 +193,7 @@ nav form{
     display: block;
     background: url(../img/kash.png) center no-repeat;
     background-size: cover;
-    width: 25px;
+    width: 18px;
     height: 100%;
 }
 nav output {
@@ -236,6 +236,8 @@ nav img{
     font-weight: 700;
     color: #154467;
     text-align: center;
+    line-height: 0px;
+    padding-top: 7px;
 }
 .search .h3{
     color: #154468;
@@ -248,13 +250,24 @@ nav img{
     font-weight: 600;
 }
 .search p{
-    margin: 3px 10px 0 0;
+    margin: 3px 18px 0 0;
+}
+.search .car1 p{
+    margin: 3px 9px 0 9px;
 }
 .search .to_h3{
-    display: table-cell;
+    text-align: justify;
     width: 100%;
     top: 7px;
+    line-height: 3px;
 }
+
+.search .to_h3:after {
+  display: inline-block;
+  content: "";
+  width: 100%;
+}
+
 .search .form_span{
     display: inline-block;
     padding-right: 2px;
@@ -319,7 +332,8 @@ nav img{
     width: 175px;
 }
 .search_disc{
-    width: 258px;
+    width: 249px;
+    margin-right:11px;
 }
 .search .car{
     width: 50%;
@@ -339,11 +353,14 @@ nav img{
 .search_car  .span_form,
 .search_disc .span_form{
     display: inline-block;
-    width: 77px;
+    width: 70px;
 }
 .search_tir .span_form{
     width: 43px;
     margin-top: 4px;
+}
+.tir1{
+  padding-top:10px;
 }
 .search_tir .R{
   display: inline-block;
@@ -358,7 +375,7 @@ nav img{
     width: 56px;
 }
 .search_tir label{
-    font-size: 12px;
+    font-size: 11px;
     color: #000;
     font-family:'Lucida', Tahoma, Verdana, Arial, sans-serif;
 }
@@ -504,14 +521,14 @@ nav img{
     background: linear-gradient(to top, #234B5D, #C9CFD1);
     color: #1F2528;
     margin: 0 5px 0 9px;
-    padding: 0 23px 20px;
+    padding: 2px 24px 20px 17px;
     border-radius: 5px;
     width: 556px;
 }
 .main figure{
     width: 147px;
     text-align: center;
-    padding: 13px 0;
+    padding: 12px 0;
     font-size: 13px;
 }
 .main figure b{
@@ -523,16 +540,16 @@ nav img{
     color: #114165;
     font-family: Arial, sans-serif;
     font-size: 16px;
-    padding-top: 1px;
+    padding-top: 5px;
     font-weight: 800;
     font-style: italic;
 }
 .main .image{
     background: #fff;
-    border-radius: 16px;
+    border-radius: 10px;
     border: 1px solid;
     width: 137px;
-    height: 129px;
+    height: 127px;
   }
 .main .image a{
     display: block;
