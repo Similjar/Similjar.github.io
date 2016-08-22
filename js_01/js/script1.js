@@ -14,9 +14,11 @@ while (exp == undefined) {
   exp = (ifInteger(exp)) ? exp : undefined;
 }
 
+console.log(base, "=base", exp, "=exp");
+
 if (base === 0) {
   console.log(base, '^', exp, ' = ', 0);
-} else if (exp === 0) {
+} else if (exp == 0) {
   console.log(base, '^', exp, ' = ', 1);
 } else if (exp < 0) {
   console.log(base, '^', exp, ' = ', 1/pow(base, -exp) );

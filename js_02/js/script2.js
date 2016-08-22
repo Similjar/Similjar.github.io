@@ -11,7 +11,7 @@ for (var i=0; i < arrInput.length; i++){
     i--;
   }
 }
-
+console.log("Введенные имена: ", arrInput);
 var yourName = prompt('Введите СВОЕ ИМЯ:');
 while (yourName.length <= 0) {
   yourName = prompt('Неверное значение, попробуйте еще раз. Введите свое имя:');
