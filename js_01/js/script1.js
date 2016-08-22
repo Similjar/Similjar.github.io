@@ -11,13 +11,13 @@ while (base == undefined) {
 
 while (exp == undefined) {
   exp = prompt('Введите СТЕПЕНЬ ЧИСЛА (целое число): ');
-  exp = (ifInteger(exp)) ? base : undefined;
+  exp = (ifInteger(exp)) ? exp : undefined;
 }
 
 if (base === 0) {
   console.log(base, '^', exp, ' = ', 0);
 } else if (exp === 0) {
-  console.log(base, '^', exp, ' = ', 'деление на ноль');
+  console.log(base, '^', exp, ' = ', 1);
 } else if (exp < 0) {
   console.log(base, '^', exp, ' = ', 1/pow(base, -exp) );
 } else {
