@@ -1,7 +1,7 @@
 'use strict';
 //  Домашнее задание JavaScript №05-06
 (function () {
-    var timer, boardTimer, split;
+    var timer, boardTimer, split, splitP;
     var countTimer;
     var idTimer = 0;
     var elemButton = [];
@@ -119,22 +119,25 @@
     
     //start - stop
     elemButton[0].onclick = function() {
+        //start
         if (elemButton[0].getAttribute('class') === (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0])) {
             clearTimeout(idTimer);
             idTimer = setInterval(drawTimer, 10);
             elemButton[0].className = elemHtml.tagButton[1] + ' ' + elemHtml.butName[3];
             elemButton[0].innerHTML = elemHtml.butName[3];
+        //stop
         } else if (elemButton[0].getAttribute('class') === (elemHtml.tagButton[1]  + ' ' + elemHtml.butName[3])) {
             clearTimeout(idTimer);
             elemButton[0].className = (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0]);
             elemButton[0].innerHTML = elemHtml.butName[0];
-            
+            splitP = elemHtml.genTag.call(split, 'p', 'p');
+            splitP.innerHTML += ('stop: '+ time[0] + ':' + time[1] + ':' + time[2] + ':' + time[3]);
         }
     }
     
     //split
     elemButton[1].onclick = function() {
-        var splitP = elemHtml.genTag.call(split, 'p', 'p');
+        splitP = elemHtml.genTag.call(split, 'p', 'p');
         splitP.innerHTML += ('split: '+ time[0] + ':' + time[1] + ':' + time[2] + ':' + time[3]);
     }
     
@@ -146,6 +149,7 @@
         elemButton[0].className = (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0]);
         elemButton[0].innerHTML = elemHtml.butName[0];
         drawBoardTimer();
+        split.innerHTML = ('');
     }
         
 })();
