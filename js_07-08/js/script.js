@@ -1,6 +1,6 @@
 'use strict';
 //  Домашнее задание JavaScript №07-08
-(function($) {
+
 $(function() {
 
   $('.tabs__caption').on('click', 'li:not(.active)', function() {
@@ -21,5 +21,4 @@ $(function() {
     });
 
 });
-})(jQuery);
 
