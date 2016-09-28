@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS 07-08</title>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="js/script.js"> </script>
+    
+    <link href="css/style.css" rel="stylesheet" media="screen">
+  </head>
+  <body>
+  <div class="wrapper">
+    <div class="tabs">
+
+     <ul class="tabs__caption">
+      <li class="tabs__item active">1-я вкладка</li>
+      <li class="tabs__item">2-я вкладка</li>
+      <li class="tabs__item">3-я вкладка</li>
+      
+     </ul>
+
+    <div class="tabs__content active">
+      <form  method="get">
+          <ul class="item__container">
+              <li class="form__item"> 
+                <label class="item__mark"> Firstname</label> 
+                <input class="item__text" type="text" id="fName" title="Please provide your firstname.">
+                <span class="item__help hidden">Please provide your firstname.</span>
+              </li>
+              <li class="form__item">
+                <label class="item__mark"> Lastname</label> 
+                <input class="item__text" type="text" id="lName" title="Please provide also your lastname.">
+                <span class="item__help hidden">Please provide also your lastname.</span>
+              </li>
+              <li class="form__item">
+                <label class="item__mark"> Address</label> 
+                <input class="item__text" type="text" id="address" title="Your home or work address.">
+                <span class="item__help hidden">Your home or work address.</span>
+              </li>
+              <li  class="form__button"> <input type="button" id="butHelp" value="Show help">
+              </li>
+          </ul>
+      </form>
+    </div>
+
+      <div class="tabs__content">
+        <p>Содержимое второго блока</p>
+      </div>
+
+      <div class="tabs__content">
+        <p>Содержимое третьего блока</p>
+      </div>
+
+      </div>
+  </div>
+  </body>
+  </html>

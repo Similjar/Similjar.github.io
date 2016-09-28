@@ -1,0 +1,120 @@
+*{
+    /*border: 0;*/
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+.wrapper{
+    width: 500px;
+    min-width: 500px;
+    height: 80%;
+    min-height: 400px;
+    margin: auto;
+    /*border: 1px solid gray;*/
+}
+.main{
+    position: relative;
+}
+body {
+    font-family: Tahoma, Arial, sans-serif;
+    color:#000;
+    font-size: 0px;
+    text-align: center;
+}
+p{
+    padding: 5px 10px;
+}
+.tabs {
+    margin-top: 50px;
+    width: 100%;
+    margin: 5% auto;
+    border: 1px solid lightgray;
+    border-radius: 6px;
+}
+.tabs > div{
+    margin: auto;
+    
+    width: 99%;
+    box-sizing: border-box;
+    height: 300px;
+    font-size: 12px;
+    text-align: left;
+}
+.tabs__caption {
+    border: 1px solid lightgray;
+    background: lightgray;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    border-bottom: none;
+    text-align: left;
+}
+li{
+    list-style: none;
+}
+.tabs__item{
+    display: inline-block;
+    background: #f2f2f2;
+    margin: 2px;
+    margin-bottom: 0;
+    border-bottom: 1px solid;
+    border: 1px solid;
+    border-color: skyblue;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    border-bottom: none;
+    width: 25%;
+    box-sizing: border-box;
+    height: 40px;
+    line-height: 35px;
+    font-size: 14px;
+    text-align: center;
+}
+.tabs__item:hover {
+    background: lightgray;
+    border-color: grey;
+}
+.tabs__item.active {
+    background: #fff;
+    border-color: grey;
+}
+.tabs__content {
+  display: none; /* по умолчанию прячем все блоки */
+}
+.tabs__content.active {
+  display: block; /* по умолчанию показываем нужный блок */
+}
+.item__mark{
+    display: inline-block;
+    width: 60px;
+}
+.form__item{
+    margin: 15px;
+    width: 100%;
+    position: relative;
+}
+input[type="button"]{
+    margin: 10px 15px;
+    width: 100px;
+    height: 40px;
+    border: 1px solid skyblue;
+    border-radius: 6px;
+    color: skyblue;
+    background: #f2f2f2;
+    
+}
+.item__help{
+    display:inline-block;
+    position: absolute;
+    border: 1px solid skyblue;
+    border-radius: 6px;
+    color: grey;
+    margin: 0 5px;
+    padding: 2px;
+}
+.hidden{
+    display: none;
+}
