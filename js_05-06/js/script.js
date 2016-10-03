@@ -43,16 +43,16 @@
         split = elemHtml.genTag.call(footer, elemHtml.divSplit);
         
         var butCount = elemHtml.butName.length;
-        var butAtr = [];
+        var butAtr = elemHtml.tagButton.slice();
+        
         for (var i = 0; i < butCount-1; i++){
-            butAtr = ['button', 'btn btn-default','btn-'];
             butAtr[1] = butAtr[1] +' ' + elemHtml.butName[i];
             butAtr[2] = butAtr[2] + elemHtml.butName[i];
             
             elemButton[i] = elemHtml.genTag.call(buttons, butAtr);
             elemButton[i].innerHTML = elemHtml.butName[i];
-            
         }
+        
         main.setAttribute('min-width', elemHtml.htmlMinWidth);
         main.setAttribute('width', elemHtml.htmlWidth);
     }
@@ -77,11 +77,44 @@
             boardTimer.fillText('00', (i * 50) + indent + 25, 50);
             boardTimer.fillText(':', ((i+1) * 50) + indent, 50);
         }
+        
         boardTimer.clearRect(197 + indent, 0, 5, 100);
         boardTimer.restore();
     }
     
- // Основная функция
+    function startOnClick() {
+        //start
+        if (elemButton[0].getAttribute('class') === (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0])) {
+            clearTimeout(idTimer);
+            idTimer = setInterval(drawTimer, 10);
+            elemButton[0].className = elemHtml.tagButton[1] + ' ' + elemHtml.butName[3];
+            elemButton[0].innerHTML = elemHtml.butName[3];
+        //stop
+        } else if (elemButton[0].getAttribute('class') === (elemHtml.tagButton[1]  + ' ' + elemHtml.butName[3])) {
+            clearTimeout(idTimer);
+            elemButton[0].className = (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0]);
+            elemButton[0].innerHTML = elemHtml.butName[0];
+            splitP = elemHtml.genTag.call(split, 'p', 'p');
+            splitP.innerHTML += ('stop: '+ time[0] + ':' + time[1] + ':' + time[2] + ':' + time[3]);
+        }
+    }
+    
+    function splitOnClick() {
+        splitP = elemHtml.genTag.call(split, 'p', 'p');
+        splitP.innerHTML += ('split: '+ time[0] + ':' + time[1] + ':' + time[2] + ':' + time[3]);
+    }
+    
+    function resetOnClick() {
+        clearTimeout(idTimer);
+        countTimer = 0;
+        time = [0, 0, 0, 0];
+        elemButton[0].className = (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0]);
+        elemButton[0].innerHTML = elemHtml.butName[0];
+        drawBoardTimer();
+        split.innerHTML = ('');
+    }
+    
+ // main function
     function drawTimer() { 
         clear();
         atribBoardTimer();
@@ -101,55 +134,29 @@
             }
             boardTimer.fillText(':', ((i + 1) * 50) + indent, 50);
         }
+        
         boardTimer.clearRect(197 + indent, 0, 5, 100);
         boardTimer.restore();
         countTimer += 10;
     }
     
+    //main part
     var indent = (parseInt(elemHtml.htmlWidth)-time.length*50)/2;
-           
-    drawHtml();
+    countTimer = 0;
     
+    drawHtml();
     timer.setAttribute('width', elemHtml.htmlWidth);
     timer.setAttribute('height', elemHtml.htmlHeight);
     boardTimer = timer.getContext('2d');
     drawBoardTimer();
-    
-    countTimer = 0;
-    
+        
     //start - stop
-    elemButton[0].onclick = function() {
-        //start
-        if (elemButton[0].getAttribute('class') === (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0])) {
-            clearTimeout(idTimer);
-            idTimer = setInterval(drawTimer, 10);
-            elemButton[0].className = elemHtml.tagButton[1] + ' ' + elemHtml.butName[3];
-            elemButton[0].innerHTML = elemHtml.butName[3];
-        //stop
-        } else if (elemButton[0].getAttribute('class') === (elemHtml.tagButton[1]  + ' ' + elemHtml.butName[3])) {
-            clearTimeout(idTimer);
-            elemButton[0].className = (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0]);
-            elemButton[0].innerHTML = elemHtml.butName[0];
-            splitP = elemHtml.genTag.call(split, 'p', 'p');
-            splitP.innerHTML += ('stop: '+ time[0] + ':' + time[1] + ':' + time[2] + ':' + time[3]);
-        }
-    }
+    elemButton[0].onclick = startOnClick;
     
     //split
-    elemButton[1].onclick = function() {
-        splitP = elemHtml.genTag.call(split, 'p', 'p');
-        splitP.innerHTML += ('split: '+ time[0] + ':' + time[1] + ':' + time[2] + ':' + time[3]);
-    }
+    elemButton[1].onclick = splitOnClick;
     
     //reset
-    elemButton[2].onclick = function() {
-        clearTimeout(idTimer);
-        countTimer = 0;
-        time = [0, 0, 0, 0];
-        elemButton[0].className = (elemHtml.tagButton[1] + ' ' + elemHtml.butName[0]);
-        elemButton[0].innerHTML = elemHtml.butName[0];
-        drawBoardTimer();
-        split.innerHTML = ('');
-    }
+    elemButton[2].onclick = resetOnClick
         
 })();
