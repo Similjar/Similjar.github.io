@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>JS 09-10</title>
+    <meta charset="utf-8">
+    <link href="css/default.css" rel="stylesheet" media="screen">
+   
+      
+    <!--  jQuery  -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.color.js"></script>
+
+    
+    <!-- select -->
+    <link rel="stylesheet" type="text/css" href="css/jquery.selectbox.css">
+    <script type="text/javascript" src="js/jquery.selectbox-0.6.1.js"></script>
+      
+    
+    <!-- Owl-carousel -->
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.css">
+    <link rel="stylesheet" href="css/owl.transitions.css">
+      
+    <script src="js/owl.carousel.js"></script>  
+      
+    <script type="text/javascript" src="js/script.js"> </script>
+    <link href="css/style.css" rel="stylesheet" media="screen">
+      
+  </head>
+  <body>
+    <nav>
+        <ul class="menu dropdown"> 
+            <li><a href=""> Nav 1 </a></li>
+            <li><a href=""> Nav 2 </a></li>
+            <li class="submenu--menu submenu__1"><a href=""> Nav 3  </a>
+            <ul class="submenu dropdown">
+                <li><a href=""> Nav 3.1 </a></li>
+                <li class="submenu--menu submenu__2"><a  href=""> Nav 3.2 </a>
+                <ul class="submenu dropdown">
+                    <li><a href=""> Nav 3.2.1 </a></li>
+                    <li><a href=""> Nav 3.2.2 </a></li>
+                </ul>
+                </li>
+                <li><a href=""> Nav 3.3 </a></li>
+                <li class="submenu--menu  submenu__2"><a href=""> Nav 3.4 </a>
+                <ul class="submenu dropdown">
+                    <li><a href=""> Nav 3.4.1 </a></li>
+                    <li class="submenu--menu  submenu__2"><a href=""> Nav 3.4.2 </a>
+                    <ul class="submenu dropdown">
+                        <li><a href=""> Nav 3.4.2.1 </a></li>
+                        <li><a href=""> Nav 3.4.2.2 </a></li>
+                        <li><a href=""> Nav 3.4.2.3 </a></li>
+                    </ul>
+                    </li>
+                    <li><a href=""> Nav 3.4.3 </a></li>
+                </ul>
+                </li>
+                <li><a href=""> Nav 3.5 </a></li>
+            </ul>
+            </li>
+            <li><a href=""> Nav 4 </a></li>
+            <li><a href=""> Nav 5 </a></li>
+        </ul>
+</nav>
+<div class="wrapper">
+    <div id="owl" class="owl-carousel">
+        <div> <img src="img/IMG_0519.png"></div>
+        <div> <img src="img/IMG_0530.png"></div>
+        <div> <img src="img/IMG_0547.png"></div>
+        <div> <img src="img/IMG_0552.png"></div>
+</div> 
+<main>
+    <div class="section">
+        <select id="idSelect" name="nameSelect">
+            <option value="значение option 1">текст option 1</option>
+            <option value="значение option 1">текст option 2</option>
+            <option value="значение option 1">текст option 3</option>
+            <option value="значение option 1">текст option ...</option>
+            <option value="значение option N">текст option N</option>
+        </select>
+    </div>
+      
+    <div class="section--js section">
+        <p> 
+            <label class="labelcheck--js" for="js-check1" >JS Чекбокс 1</label> 
+            <span class="check--js">
+                <input type="checkbox" id="js-check1" checked>
+            </span>
+        </p>
+         <p> 
+            <label class="labelcheck--js" for="js-check2" >JS Чекбокс 2</label> 
+            <span class="check--js">
+                <input type="checkbox" id="js-check2" >
+            </span>
+        </p>
+         <p> 
+            <label class="labelcheck--js" for="js-check3" >JS Чекбокс 3</label> 
+            <span class="check--js">
+                <input type="checkbox" id="js-check3" >
+            </span>
+        </p>
+         <p> 
+            <label class="labelcheck--js" for="js-check4" >JS Чекбокс 4</label> 
+            <span class="check--js">
+                <input type="checkbox" id="js-check4" disabled="disabled">
+            </span>
+        </p>
+         <p> 
+            <label class="labelcheck--js" for="js-check5" >JS Чекбокс 5</label> 
+            <span class="check--js">
+                <input type="checkbox" id="js-check5" disabled="disabled" checked>
+            </span>
+        </p>
+         
+    </div>
+    
+    <div class="section section--css">
+        <ul> 
+            <li>
+                <input type="checkbox" id="css-check1">
+                <label for="css-check1">CSS Чекбокс 1</label>
+            </li>   
+            <li>
+                <input type="checkbox" id="css-check2">
+                <label for="css-check2">CSS Чекбокс 2</label>
+            </li>
+            <li>
+                <input type="checkbox" id="css-check3">
+                <label for="css-check3">CSS Чекбокс 3</label>
+            </li>
+            <li>
+                <input type="checkbox" id="css-check4" disabled="disabled">
+                <label for="css-check4">CSS Чекбокс 4</label>
+            </li>
+            <li>
+                <input type="checkbox" id="css-check5" disabled="disabled" checked>
+                <label for="css-check5">CSS Чекбокс 5</label>
+            </li>
+        </ul>
+    </div>
+    </main>
+  </div>
+  </body>
+  </html>

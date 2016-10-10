@@ -1,0 +1,158 @@
+html, body{
+    height: 100%;
+    width: 100%;
+    font: normal 9px, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+.wrapper{
+    width: 90%;
+    margin: 0 auto;
+    font: normal 9px, Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+main {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+nav{
+    width: 100%;
+    margin: 0 auto 10px;
+    padding-top: 10px;
+}
+nav .submenu__2:after {
+    content: '\25b6';
+	display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+}
+nav .submenu__1:after {
+    content: '\25bc';
+	display: inline-block;
+    position: absolute;
+    top: 2px;
+    right: 0;
+}
+.owl-carousel{
+    margin: 10px auto;
+    text-align: center;
+}
+
+.owl-carousel img{
+    display: block;
+    width: 400px;
+}
+
+.section{
+     font-size: 9px;
+    font-family: Tahoma, Verdana, Geneva, Arial, Helvetica, sans-serif;
+    display: inline-block;
+    vertical-align: top;
+    text-align: left;
+    width: 32%;
+    height: 120px;
+    padding-left: 5px;
+}
+
+.section--css input[type=checkbox] {
+	position: absolute;
+    display: none;
+}
+.section--css label {
+	cursor: pointer;
+}
+.section--css label:after {
+	content: " ";
+	display: inline-block;
+	width: 17px;
+	height: 17px;
+	background: url(../img/checkbox.png);
+	position: relative;
+	top: 4px;
+	margin-left: 5px;
+}
+
+.section--css label:after {
+	background: url(../img/checkbox.png);
+}
+
+.section--css input[type=checkbox]:checked + label:after {
+    background-position: 0 -17px;
+}
+.section--css label:hover:after {
+    background-position: 0 -34px;
+}
+.section--css input[type=checkbox]:checked + label:hover:after {
+    background-position: 0 -51px;
+}
+.section--css input[type=checkbox]:checked:disabled + label:after {
+    background-position: 0 -68px;
+    pointer-events: none;
+}
+.section--css input[type=checkbox]:disabled + label:after {
+    background-position: 0 -85px;
+    pointer-events: none;
+}
+
+.check--js{
+    width: 17px;
+    height: 17px;
+    display: inline-block;
+    cursor: pointer;
+    vertical-align: middle;
+    background: url(../img/checkbox1.png);
+}	
+.check--js input {
+    display: none;
+}
+.section--js p{
+    line-height: 21px;		
+}
+
+nav a{
+    text-decoration: none;
+    display: block;
+    line-height: 30px;
+    padding: 0 12px;
+    margin: 0 12px;
+    vertical-align: top;
+}
+nav ul li {
+    display: inline-block;
+     position: relative;
+}
+.menu >li {
+    display: inline-block;
+    line-height: 30px;
+   
+}
+.submenu {
+    display: none;
+    line-height: 20px;
+    width: 150px;
+}
+.dropdown{
+    background: lightsalmon;
+    padding: 5px 0;
+}
+
+nav li ul {    
+    font-size: 0.9em;
+    position:absolute;
+    /*transition: all 3s easeOutBounce;*/
+    left:0;
+    top:31px;
+    width:150px;
+    z-index: 2;
+}
+nav li li {
+    position:relative;
+    margin:0;
+    display:block;
+}
+nav li li ul {
+    position:absolute;
+    top:0;
+    left:150px; 
+    margin:0;
+    z-index: 2;
+}
