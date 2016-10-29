@@ -1,0 +1,60 @@
+.wrapper{
+    width: 90%;
+    
+}
+.form{
+    text-align: center;
+    margin: 5px;
+}
+form{
+    position: relative;
+}
+.image{
+    text-align: center;
+    margin: 5px;
+    background-color: lightgray;
+}
+.image img{
+    max-width: 24%;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1%;
+    border: 1px solid grey;
+}
+
+input[type=text] {
+    width: 70%;
+	font-size: 12px;
+    line-height: 20px;
+	padding: 6px 0 4px 10px;
+	border: 1px solid #cecece;
+	background: #fff;
+	border-radius: 4px;
+    text-overflow: ellipsis;
+}
+input[type=submit]{
+   /* display:none;
+    display: block;*/
+    position: absolute;
+    height: 32px;
+    width: 33px;
+    background-color: cadetblue;
+    background-image: url('../img/lupa_mini.png');
+    background-size: contain;
+    border-radius: 2px;
+    border: 1px solid cadetblue;
+}
+
+input[type=submit]:hover {
+	box-shadow: 0 1px 5px rgba(0,0,0,.3);
+}
+input[type=submit]:active {
+	margin-top: 1px;
+	margin-bottom: -1px;
+	zoom: 1;
+}
+
+h1{
+    color: cadetblue;
+    text-shadow: 0 1px 5px rgba(0,0,0,.3);
+}
