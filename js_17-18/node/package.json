@@ -1,0 +1,36 @@
+{
+  "name": "js_17-18",
+  "version": "1.0.0",
+  "description": "dz18",
+  "main": "scripts.main.js",
+  "dependencies": {
+    "gulp": "^3.9.1"
+  },
+  "devDependencies": {
+    "del": "^2.2.2",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-cache": "^0.4.5",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-imagemin": "^3.1.0",
+    "gulp-jshint": "^2.0.2",
+    "gulp-livereload": "^3.8.1",
+    "gulp-notify": "^2.2.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-ruby-sass": "^2.1.0",
+    "gulp-uglify": "^2.0.0"
+  },
+  "scripts": {
+    "test": "npm run test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/similjar/similar.github.io.git"
+  },
+  "author": "Violeta Basina",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/similjar/similar.github.io/issues"
+  },
+  "homepage": "https://github.com/similjar/similar.github.io#readme"
+}
