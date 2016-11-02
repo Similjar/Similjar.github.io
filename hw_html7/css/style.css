@@ -425,7 +425,7 @@ header {
   border-bottom: 1px solid #fefefe;
   border-top: 1px solid #e6e6e6;
   height: 120px;
-  padding: 35px 0;
+  padding: 20px 0;
   margin: auto;
   text-align: center;
   line-height: 60px;
@@ -626,7 +626,7 @@ footer {
     height: 670px;
   }
   .group3--right, .group3--center, .group3--left {
-    margin: 5% auto;
+    margin: 6% auto;
     padding: 0;
   }
   .section__text--group3 {
