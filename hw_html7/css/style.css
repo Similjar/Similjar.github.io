@@ -129,7 +129,7 @@ header {
   font-size: 48px;
   text-shadow: 0 2px 2px rgba(0,0,0,.3);
   text-transform: uppercase;
-  margin: 0 auto; 
+  margin: 0 auto;
   min-width: 165px;
 }
 .logo__er {
@@ -351,7 +351,7 @@ header {
   background: linear-gradient(to top, #322539, #745083);
   height: 342px;
   box-shadow: 0px 3px 9px 0px rgba(200, 200, 200, 1);
-  padding-top: 10%;
+  padding-top: 8%;
   border-top: 1px solid #33253a;
   color: #fff;
 }
@@ -487,23 +487,23 @@ footer {
   	max-width: 959px;
   }
   .col1-3--media {
-    width: 33.33%;  
+    width: 33.33%;
   }
   .col2-3--media {
-    width: 66.66%;  
+    width: 66.66%;
   }
   .col50--media {
-    width: 50%;  
+    width: 50%;
   }
   .col100--media {
     display: block;
-    width: 100%;  
+    width: 100%;
   }
   .logo{
     display: block;
     float: none;
     margin-left: 0;
-  } 
+  }
 
   .nav__ul--header {
     text-align: left;
@@ -528,11 +528,11 @@ footer {
   .section__text--2line {
     max-height: 42px;
   }
-    
+
   .icon--group1--right:before {
     left: 5%;
   }
-  
+
   footer {
     height: 200px;
   }
@@ -545,14 +545,14 @@ footer {
   	max-width: 767px;
   }
   .col1-3--media_480 {
-    width: 33.33%;  
+    width: 33.33%;
   }
   .col50--media_480 {
-    width: 50%;  
+    width: 50%;
   }
   .col100--media_480 {
     display: block;
-    width: 100%;  
+    width: 100%;
   }
   .section__h1 {
     font-size: 36px;
@@ -567,14 +567,14 @@ footer {
   .section__text {
     font-size: 14px;
   }
-    
+
   .logo {
     text-align: center;
-  }  
-    
+  }
+
   .slider {
     height: 246px;
-  }   
+  }
   .slider__arrow {
 	bottom: -15%;
   }
@@ -592,14 +592,14 @@ footer {
     display: none;
   }
   .slider__footer {
-    text-align: center;      
+    text-align: center;
   }
   .slider__item {
-    margin: 0, 5px;      
+    margin: 0 5px;
   }
-    
+
   .group1 {
-    height: 600px;    
+    height: 600px;
   }
   .section-mini--group1 {
     margin: 2% auto;
@@ -615,15 +615,15 @@ footer {
   .icon--group1--right:before {
     left: 0%;
   }
-    
+
   .group2 {
     height: 782px;
   }
     .container--group2--right{
         margin-left: 15%;
-    }      
+    }
   .group3 {
-    height: 670px;    
+    height: 670px;
   }
   .group3--right, .group3--center, .group3--left {
     margin: 5% auto;
@@ -634,21 +634,21 @@ footer {
     overflow: hidden;
     text-overflow: ellipsis;
   }
-    
+
   .brands {
     height: 240px;
   }
   .nav__footer, .design__footer {
     text-align: center;
-  } 
-  
+  }
+
     /*--------выпадающее меню---------*/
   .header-list {
     width: 100%;
     text-align: center;
     float: none;
   }
-       
+
   .nav__ul--header {
     min-width: 200px;
     width: 246px;
@@ -656,7 +656,7 @@ footer {
     position: absolute;
     top: 15%;
     left: 50%;
-    margin-left: -129px;  
+    margin-left: -129px;
     z-index: 5;
   }
     .nav__item--dropdown {
@@ -677,7 +677,7 @@ footer {
    }
     .nav__ul--header li:last-child {
         border-bottom: transparent;
-   } 
+   }
     .nav__link--dropdown {
         text-decoration: none;
     }
@@ -688,15 +688,15 @@ footer {
         display: block;
         background: none;
         border: none;
-        text-align: center; 
+        text-align: center;
         padding: 0;
-    } 
+    }
     .nav__item--dropdown--first .nav__link--dropdown {
         width: auto;
         line-height: 27px;
         border-bottom: 2px solid #edbfff;
     }
-    
+
     .nav__ul--header:hover {
         border: 1px solid #051116;
         border-radius: 10px;
@@ -705,22 +705,22 @@ footer {
     }
     .nav__ul--header:hover li {
         display: block;
-       
+
    }
     .nav__link--dropdown:hover {
         background: rgba(54,41,62,.9);
     }
-   /*-------------*/    
+   /*-------------*/
 }
 
 
 /*----------------------320px------------------------------------------------------------*/
 @media only screen and (max-width: 479px) {
   .container {
-    max-width: 479;
+    max-width: 479px;
   }
   .col50--media_320 {
-    width: 50%;  
+    width: 50%;
   }
   .slider__text {
     width: 93%;
