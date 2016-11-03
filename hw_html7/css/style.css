@@ -375,7 +375,6 @@ header {
 .quotation {
   position: relative;
   padding: 21px 25px 44px 39px;
-  margin-left: -61px;
   margin-top: -21px;
   background-color: #fff;
   box-shadow: 0px 1px 5px 0px #efefef;
@@ -395,6 +394,7 @@ header {
 .container--group2--left {
   padding-right: 0;
   padding: 21px;
+  margin-left: -61px;
 }
 
 /*------------ group3   ------------------*/
@@ -620,7 +620,7 @@ footer {
     height: 782px;
   }
     .container--group2--right{
-        margin-left: 15%;
+        margin-left: 0 15%;
     }
   .group3 {
     height: 670px;
