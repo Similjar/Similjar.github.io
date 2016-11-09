@@ -43,7 +43,7 @@
                 <% for (var j = 0; j < answer[i].length; j++){ %>
                     <li>
                     <input class="checkbox--item" type="checkbox" id="<%= i+1 %><%= j+1 %>"
-                    <% if (check[i][j] === 1) { %> checked > <% }
+                    <% if (choice[i] != undefined && choice[i][j] === 1) { %> checked > <% }
                     else { %> > <%}
                     %>
                     <label class="list-item__label" for="<%= i+1 %><%= j+1 %>"><%= answer[i][j] %></label>

@@ -1,9 +1,11 @@
 (function($) {
 
     $.fn.modalWindowShow = function() {
-        var $link = this;
-        var $modal;
-        var $overlay;
+        var $link = this,
+            $modal,
+            $overlay,
+            $body = $('body'),
+            result = '.result';
 
         $link.on('click', showModal);
 
@@ -12,8 +14,8 @@
             $modal = $('<div class="modalWindow"><h1 class="h1"> Результат прохождения теста: </span> </h1><ul class="result"></ul>');
             $overlay = $('<div class="modalWindow--overlay"></div>');
 
-            $('body').append($overlay);
-            $('body').append($modal);
+            $body.append($overlay);
+            $body.append($modal);
 
             templaterAnswer();
 
@@ -23,18 +25,20 @@
         function hideModal(){
             $modal.hide();
             $overlay.hide();
-            localStorage.removeItem('result');
+        }
+
+        function clearLS(){
             localStorage.removeItem('userAnswer');
             localStorage.removeItem('dataTestStart');
-          //  localStorage.clear();
         }
 
         function templaterAnswer(){
-            var tempHtmlAnswer = $('#htmlTemplaterAnswer').html();
-            var tempDataAnswer = JSON.parse(localStorage.getItem('result'));
-
+            var tempHtmlAnswer = $('#htmlTemplaterAnswer').html(),
+                tempDataAnswer = JSON.parse(localStorage.getItem('userAnswer'));
+            clearLS();
+            
             var tempContentAnswer = tmpl(tempHtmlAnswer, tempDataAnswer);
-            $('.result').append(tempContentAnswer);
+            $(result).append(tempContentAnswer);
         }
 
         return this;

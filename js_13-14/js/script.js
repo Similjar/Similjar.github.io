@@ -2,37 +2,41 @@
 //  Домашнее задание JavaScript №07-08
 
 $(function() {
-    var $modal;
-    var $overlay;
-    var nullArr = [[0, 0, 0], [0, 0, 0], [0, 0, 0]];
     var dataTest = {
             question: ['Вопрос №1', 'Вопрос №2', 'Вопрос №3'],
             answer:   [['Вариант ответа №11', 'Вариант ответа №12', 'Вариант ответа №13'],
                       ['Вариант ответа №21', 'Вариант ответа №22', 'Вариант ответа №23'],
                       ['Вариант ответа №31', 'Вариант ответа №32', 'Вариант ответа №33']],
             test:     [[1, 0, 0], [0, 1, 0], [0, 0, 1]],
-            check:    [[0, 0, 0], [0, 0, 0], [0, 0, 0]],
+            choice:   [[]]
     };
+
     var userAnswer = {
-        check: nullArr,
-    }
-    var result = {
-        result: [],
-    }
+          choice: [[]],
+          result: []
+        };
+    var countQuestion = dataTest.question.length,
+        $buttonSubmit = $('.button'),
+        $insetrTest = $('.test'),
+        checkboxItem='.checkbox--item',
+        userChoice = '.list-item__label',
+        html = $('#htmlTemplater').html();
 
     startInsert();
-    templater();
+    templater('dataTestStart');
+    $buttonSubmit.on('click', buttonClick);
+    $buttonSubmit.modalWindowShow();
 
-    $('.button').on('click', buttonClick);
-    $('.button').modalWindowShow();
-
-    $('.list-item__label').on("mousedown", changeCheck);
+    $(userChoice).on("mousedown", changeCheck);
 
     function startInsert(){
       if (localStorage.getItem('userAnswer')){
-        userAnswer = JSON.parse(localStorage.getItem('userAnswer'));
+        userAnswer = getFromLocalStorage('userAnswer');
+      } else {
+          fillNullInArr(userAnswer.choice, countQuestion, dataTest.answer);
       }
-      dataTest.check = userAnswer.check;
+
+      dataTest.choice = userAnswer.choice;
       setLocalStorage('dataTestStart', dataTest);
     }
 
@@ -40,13 +44,20 @@ $(function() {
       localStorage.setItem(storageName, JSON.stringify(storageData));
     };
 
-    function templater(){
-      var dataInsert = 'dataTestStart';
-      var html = $('#htmlTemplater').html();
-      var data = JSON.parse(localStorage.getItem(dataInsert));
+    function getFromLocalStorage(item){
+      return JSON.parse(localStorage.getItem(item));
+    };
 
-      var content = tmpl(html, data);
-      $('.test').append(content);
+    function fillNullInArr(ArrIn, N, ArrFrom){
+      for (var i = 0; i < N; i++){
+        ArrIn[i] = new Array(ArrFrom[i].length);
+      }
+    }
+
+    function templater(dataInsert){
+      var dataInsert = getFromLocalStorage(dataInsert);
+      var content = tmpl(html, dataInsert);
+      $insetrTest.append(content);
     }
 
     function changeCheck(){
@@ -54,42 +65,47 @@ $(function() {
         var j = elementChange % 10;
         var i = (elementChange - j) / 10;
 
-          if(!$(this).prev().prop("checked")){
-            userAnswer.check[i-1][j-1] = 1;
-          } else {
-            userAnswer.check[i-1][j-1] = 0;
-          }
-
+        fillInChoice.call($(this), userAnswer, i-1, j-1);
         setLocalStorage('userAnswer', userAnswer);
     }
 
-    function clearCheck(){
-        $('.test').find('.checkbox--item').removeAttr("checked");
-        console.log($('.test').find('.checkbox--item'));
-        dataTest.check = nullArr;
-        userAnswer.check = nullArr;
-        result.result = [];
+    function fillInChoice(container, i, j){
+        if($(this).prev().prop("checked")){
+          container.choice[i][j] = 0;
+        } else {
+          container.choice[i][j] = 1;
+        }
     }
 
-    function buttonClick(e){
-        e.preventDefault();
-        result.result = [];
-        for (var i = 0; i < dataTest.question.length; i++){
+    function clearCheck(){
+        $insetrTest.find(checkboxItem).removeAttr("checked");
+        fillNullInArr(dataTest.choice, countQuestion, dataTest.test);
+        fillNullInArr(userAnswer.choice, countQuestion, dataTest.test);;
+        userAnswer.result = [];
+    }
+
+    function buttonClick(){
+        userAnswer.result = [];
+        for (var i = 0; i < countQuestion; i++){
             var countResult = 0;
-            var count = userAnswer.check[i].length;
+            var count = dataTest.test[i].length;
             for (var j = 0; j < count; j++){
-                if (dataTest.test[i][j] === userAnswer.check[i][j]) {
+                if (userAnswer.choice[i][j] == undefined) {
+                  userAnswer.choice[i][j] = 0;
+                }
+                if (dataTest.test[i][j] == userAnswer.choice[i][j]) {
                     countResult++;
                 }
             }
+
             if (countResult === count){
-                result.result.push(1);
+                userAnswer.result.push(1);
             } else {
-                result.result.push(0);
+                userAnswer.result.push(0);
             }
         }
 
-        setLocalStorage('result', result);
+        setLocalStorage('userAnswer', userAnswer);
 
         clearCheck();
     }
