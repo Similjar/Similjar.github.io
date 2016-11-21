@@ -43,7 +43,7 @@ button{
     height: 40px;
     width: 20%;
     padding: 6px 12px;
-    background-color: #fff;
+    background-color: #ddd;
     border-radius: 4px;
     border: 1px solid #bbb;
     font-size: 1.5rem;
@@ -73,4 +73,23 @@ button:hover {
 }
 span{
   display: inline-block;
+}
+
+@media only screen and (max-width: 544px) {
+  button{
+      width: 35%;
+  }
+}
+
+@media only screen and (max-width: 460px) {
+  button{
+      width: 45%;
+      font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+    button{
+        width: 48%;
+    }
 }

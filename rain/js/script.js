@@ -3,23 +3,30 @@ $(function() {
   var countField = $('.count'),
       speedField = $('.speed'),
       count = 0,
-      start = '.StartButton',
-      stop = '.StopButton',
+      start = '.startButton',
+      stop = '.stopButton',
       field = 'main',
       squareClass = 'square',
-      speedUp = 10,
+      speedUp = 5,
       speedInUp = speedUp,
-      timerId = 0,
+      sqTimeOutId = 0,
       squares = [],
       squareSide = 30,
       heightOfField = $('main').height() - squareSide,
       widthOfField = $('main').width() - squareSide;
 
+      $(field).on('click', '.square', function () {
+        var currentSquare = $(this);
+        squareClick.call(currentSquare);
+      });
+
+      $(start).on('click', startOnClick);
+      $(stop).on('click', stopOnClick);
 
   function startOnClick() {
     clear();
-    var sqTimeOutId = setTimeout(function tick() {
-      var sqTimeOut = 1000 * Math.random() * (speedInUp / 2);
+    sqTimeOutId = setTimeout(function tick() {
+      var sqTimeOut = 1000 * Math.random() * (speedInUp);
       drowSquare();
       squares.push(sqTimeOutId);
       sqTimeOutId = setTimeout(tick, sqTimeOut);
@@ -27,7 +34,7 @@ $(function() {
   }
 
   function stopOnClick() {
-    clearInterval(timerId);
+    clearTimeout(sqTimeOutId);
     for (var i = 0; i < squares.length; i++){
       clearTimeout(squares[i]);
     }
@@ -37,7 +44,7 @@ $(function() {
   function drowSquare() {
     var random = Math.random(),
         elem = {
-          speed: speedInUp * heightOfField / Math.random(),
+          speed: (speedInUp + 1) * heightOfField / Math.random(),
           y: widthOfField * Math.random(),
           color: '#' + Math.round(0xfff * Math.random()).toString(16),
         },
@@ -70,10 +77,14 @@ $(function() {
   }
 
   function goToSpeedUp() {
-    if (count%speedUp === 0) {
+    if (speedInUp === 1) {
+      alert('Game over');
+      stopOnClick();
+    } else if (count%speedUp === 0) {
       speedInUp--;
       insertSpeed(speedUp - speedInUp);
     }
+    return;
   }
 
   function move(speed) {
@@ -87,22 +98,19 @@ $(function() {
     if (countIn < 10) {countField.text('0' + countIn);}
     else {countField.text('' + countIn);}
   }
+  
   function insertSpeed(speedIn) {
     speedField.text('' + speedIn);
   }
 
   function clear() {
     count = 0;
+    speedInUp = speedUp;
+    sqTimeOutId = 0;
+    squares = [];
+
     insertCount(count);
-    $(field).empty();
     insertSpeed(0);
+    $(field).empty();
   }
-
-  $(field).on('click', '.square', function () {
-    var currentSquare = $(this);
-    squareClick.call(currentSquare);
-  });
-  $(start).on('click', startOnClick);
-  $(stop).on('click', stopOnClick);
-
 });
